@@ -193,13 +193,14 @@ bindsym $mod+r mode "resize"
 #}
 exec --no-startup-id xss-lock -l -- i3lock --nofork --image=/home/alina/.config/wallpaper/arch-black-4k.png -e -f -F
 exec nitrogen --set-zoom-fill /home/alina/.config/wallpaper/forrest.png
+exec xwinwrap -g 1920x1080 -ov -ni -s -nf -d -o 1 -- mpv -wid WID --loop /home/alina/.config/wallpaper/hex_lines.mp4
 exec polybar -c /home/alina/.config/polybar/config.ini
 exec synclient VertScrollDelta=-78
 exec synclient HorizScrollDelta=78
 exec synclient TapButton1=1
 exec synclient TapButton2=3
 exec synclient TapButton3=2
-exec /home/alina/clones/picom/build/src/picom -c -b --vsync --detect-rounded-corners --corner-radius 15 --detect-client-opacity  --config /home/alina/.config/picom/picom.conf
+exec /home/alina/clones/picom/build/src/picom
 exec dunst -conf /home/alina/.config/dunst/.dunstrc
 # workspace number 1 
 # exec "kitty -e $(neofetch; zsh)"
